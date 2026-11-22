@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday Lindsey</title>
+<meta name="theme-color" content="#0B0B0C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&family=Caveat:wght@400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;
+  --ink:#0B0B0C; --gold:#D4AF6A; --gold2:#F3E3B5; --ivory:#F7F2EA; --blush:#E8C4C0;
+  --shimmer:linear-gradient(100deg,#B8904A 0%,#D4AF6A 30%,#F3E3B5 50%,#D4AF6A 70%,#B8904A 100%);
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+  --hand:"Caveat",cursive; --script:"Pinyon Script",cursive;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--ink)}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{background:var(--ink);color:var(--ivory);font-family:var(--sans);font-weight:300;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background-color .9s ease}
+body.lights{background:var(--ivory);color:var(--ink)}
+img{display:block;max-width:100%}
+section{position:relative;width:100%;overflow:hidden}
+.screen{height:100vh;height:100svh;display:flex;align-items:center;justify-content:center;padding:0 24px}
+.serif{font-family:var(--serif);font-weight:300;letter-spacing:-.02em;line-height:1.02}
+.gold{background:var(--shimmer);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:sheen 6s linear infinite}
+@keyframes sheen{to{background-position:-200% 0}}
+.eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);opacity:.8}
+
+/* grain for personal photos */
+.grain{position:relative;overflow:hidden}
+.grain::after{content:"";position:absolute;inset:-50%;pointer-events:none;opacity:.16;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  animation:grain 1s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-4%,3%)}40%{transform:translate(3%,-5%)}60%{transform:translate(-6%,2%)}80%{transform:translate(4%,4%)}}
+.ph{background:#1a1a1c}
+.ph img{width:100%;height:100%;object-fit:cover}
+
+/* dust */
+#dust{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.7}
+main{position:relative;z-index:1}
+
+/* 1 cold open */
+#open .wrap{text-align:center}
+#open h1{font-size:clamp(72px,22vw,200px)}
+#open h1 small{display:block;font-size:.42em;font-style:italic;margin-bottom:.1em}
+#open h1 span{display:inline-block;opacity:0;filter:blur(8px)}
+#open h2{font-size:clamp(26px,7vw,48px);font-style:italic;color:var(--ivory);opacity:0;margin-top:10px}
+.cue{position:absolute;bottom:max(32px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;opacity:0}
+.cue i{width:1px;height:38px;background:linear-gradient(var(--gold),transparent);animation:cue 1.8s ease-in-out infinite;transform-origin:top}
+@keyframes cue{0%{transform:scaleY(0);opacity:1}60%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+
+/* 2 letter */
+#letter .bg{position:absolute;inset:0;opacity:0}
+#letter .bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.15)}
+#letter .bg::before{content:"";position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse at center,rgba(11,11,12,.55),rgba(11,11,12,.92))}
+#letter .lines{position:relative;z-index:3;width:min(820px,100%);height:60vh;display:grid;place-items:center}
+#letter .line{grid-area:1/1;text-align:center;font-size:clamp(30px,8vw,64px);color:var(--ivory)}
+#letter .line .w{display:inline-block;opacity:.08;transition:none}
+
+/* 3 reel */
+#reel .track{display:flex;gap:6vw;padding:0 12vw;height:100%;align-items:center;will-change:transform}
+#reel .head{flex:0 0 auto;width:min(70vw,520px)}
+#reel .head h3{font-size:clamp(44px,12vw,96px);margin-top:14px}
+.card{flex:0 0 auto;width:min(72vw,420px);text-align:center}
+.card .ph{aspect-ratio:4/5;border-radius:6px;transition:transform .5s cubic-bezier(.2,.7,.2,1);box-shadow:0 30px 60px -20px rgba(0,0,0,.7)}
+.card p{font-family:var(--hand);font-size:clamp(24px,6.4vw,34px);color:var(--gold2);margin-top:18px;line-height:1.15;transform:rotate(-1.5deg)}
+#best{text-align:center}
+#best h3{font-size:clamp(46px,13vw,120px)}
+
+/* 4 qualities */
+#qual .grid{display:grid;grid-template-columns:1fr;gap:clamp(6px,2vh,18px);text-align:center;perspective:800px}
+#qual .q{font-family:var(--serif);font-size:clamp(34px,10vw,84px);letter-spacing:-.01em;line-height:1;transform-origin:50% 50% -20px;opacity:0}
+#qual .sep{width:30px;height:1px;background:var(--gold);margin:0 auto;opacity:.5}
+#friends .wrap{width:min(440px,100%)}
+#friends h3{font-size:clamp(30px,8vw,52px);text-align:center;margin-bottom:28px}
+.chat{display:flex;flex-direction:column;gap:10px}
+.bub{align-self:flex-start;background:#1d1d20;border:1px solid rgba(212,175,106,.18);padding:11px 16px;border-radius:20px 20px 20px 6px;font-size:15px;opacity:0}
+.bub:nth-child(even){align-self:flex-end;border-radius:20px 20px 6px 20px;background:linear-gradient(135deg,#3a2f1d,#2a2418)}
+.bub b{display:block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:3px}
+.bub.more{background:none;border:none;color:var(--gold2);font-style:italic;font-family:var(--serif);font-size:22px;align-self:center}
+#parents h3{font-size:clamp(34px,9vw,72px);text-align:center;max-width:900px}
+
+/* 5 map */
+#abroad .stage{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:70px 16px 40px}
+#map{width:min(560px,100%);height:auto;overflow:visible}
+#map .land{fill:none;stroke:rgba(247,242,234,.14);stroke-width:1.2;stroke-dasharray:2 4}
+#map .route{fill:none;stroke:url(#gg);stroke-width:2.2;stroke-linecap:round}
+#map .pin{opacity:0}
+#map .pin circle.halo{fill:rgba(212,175,106,.18)}
+#map .pin text{font-family:var(--serif);fill:var(--gold2);font-size:17px}
+#map .pin text.cap{font-family:var(--hand);font-size:19px;fill:var(--ivory)}
+#abroad .over{position:absolute;left:0;right:0;bottom:6vh;padding:0 24px;text-align:center}
+#abroad .over p{font-family:var(--serif);font-size:clamp(21px,5.4vw,34px);line-height:1.2;max-width:760px;margin:0 auto;opacity:0;position:absolute;left:24px;right:24px;bottom:0}
+#abroad h3{position:absolute;top:max(36px,env(safe-area-inset-top));left:0;right:0;text-align:center;font-size:clamp(32px,9vw,60px)}
+.pol{position:absolute;width:min(29vw,190px);background:#f4efe6;padding:8px 8px 30px;box-shadow:0 20px 40px -10px rgba(0,0,0,.6);left:50%;top:50%;opacity:0}
+.pol .ph{aspect-ratio:1}
+
+/* 6 transition */
+#trans h3{font-size:clamp(34px,9vw,72px);text-align:center;position:absolute;padding:0 24px;opacity:0}
+#trans .hair{position:absolute;left:0;top:50%;height:1px;width:100%;background:linear-gradient(90deg,transparent,var(--gold2),var(--gold),transparent);transform:scaleX(0);transform-origin:left;box-shadow:0 0 12px var(--gold)}
+
+/* 7 reveal */
+#curtain{position:fixed;inset:0;background:var(--ivory);transform:scaleY(0);transform-origin:top;z-index:0;pointer-events:none}
+#curtain::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);box-shadow:0 0 14px var(--gold)}
+.light{color:var(--ink)}
+#hero .frame{position:absolute;inset:0}
+#hero .frame img,#hero svg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#hero .frame img{opacity:0;filter:blur(14px)}
+#hero svg path{fill:none;stroke:url(#gg2);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 4px rgba(212,175,106,.8))}
+#hero .spark{opacity:0;transform-box:fill-box;transform-origin:center}
+#hero .copy{position:absolute;left:0;right:0;bottom:0;padding:0 24px max(56px,env(safe-area-inset-bottom));text-align:center;z-index:3;
+  background:linear-gradient(transparent,rgba(247,242,234,.0) 0%,rgba(247,242,234,.85) 60%);padding-top:120px}
+#hero h2{font-size:clamp(56px,16vw,150px);opacity:0}
+#hero .sub{font-family:var(--serif);font-style:italic;font-size:clamp(20px,5vw,32px);opacity:0;margin-top:4px;color:#3b342a}
+
+.beat{display:flex;flex-direction:column;align-items:stretch}
+.beat .img{position:relative;flex:1 1 60%;overflow:hidden}
+.beat .img img{position:absolute;width:100%;height:100%;object-fit:cover;will-change:transform}
+.beat .img::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(105deg,transparent 35%,rgba(255,246,220,.55) 50%,transparent 65%);background-size:250% 100%;background-position:150% 0;mix-blend-mode:soft-light}
+.beat.on .img::after{animation:sweep 3.6s ease-in-out infinite}
+@keyframes sweep{0%{background-position:150% 0}60%,100%{background-position:-60% 0}}
+.beat .txt{flex:0 0 auto;padding:28px 24px max(36px,env(safe-area-inset-bottom));text-align:left}
+.beat .stat{font-size:clamp(46px,13vw,110px);line-height:.92}
+.beat .line{font-family:var(--serif);font-size:clamp(20px,5.2vw,30px);line-height:1.25;margin-top:14px;color:#2a2620;max-width:520px}
+.beat .line small{display:block;font-family:var(--sans);font-size:14px;color:#6b6155;margin-top:10px;line-height:1.5}
+.beat .stat,.beat .line{opacity:0;transform:translateY(24px)}
+.counter{font-family:var(--serif);font-size:22px;color:var(--gold);letter-spacing:.3em;margin-top:10px}
+.counter span{opacity:.2;transition:opacity .3s}
+.counter span.lit{opacity:1}
+.tw{position:absolute;width:44px;height:44px;margin:-22px 0 0 -22px;opacity:0;pointer-events:none}
+
+#campaign{min-height:150vh;padding:12vh 0}
+#campaign .a{width:84vw;margin-left:4vw;aspect-ratio:3/4;overflow:hidden;position:relative}
+#campaign .b{width:52vw;aspect-ratio:4/5;overflow:hidden;margin:-26vw 0 0 auto;margin-right:5vw;position:relative;z-index:2;box-shadow:0 40px 80px -30px rgba(0,0,0,.4);border:6px solid var(--ivory)}
+#campaign img{width:100%;height:120%;object-fit:cover}
+#campaign h3{font-size:clamp(34px,9vw,80px);padding:12vh 24px 0;text-align:center}
+
+/* 8 box */
+#box .scene{perspective:900px;width:180px;height:180px;position:relative;margin-top:-6vh}
+.cube{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateX(-22deg) rotateY(-32deg)}
+.face{position:absolute;width:180px;height:180px;background:linear-gradient(145deg,#1b1b1e,#060607);border:1px solid #2a2a2e}
+.f1{transform:translateZ(90px)}.f2{transform:rotateY(90deg) translateZ(90px)}.f3{transform:rotateY(180deg) translateZ(90px)}.f4{transform:rotateY(-90deg) translateZ(90px)}.f5{transform:rotateX(-90deg) translateZ(90px)}
+.face::before,.face::after{content:"";position:absolute;background:var(--shimmer)}
+.face::before{left:50%;top:0;bottom:0;width:16px;margin-left:-8px}
+.f5::after{top:50%;left:0;right:0;height:16px;margin-top:-8px}
+.lid{position:absolute;left:-8px;top:-8px;width:196px;height:196px;transform-style:preserve-3d;transform:translateY(-90px) rotateX(90deg) translateZ(0);}
+.lidwrap{position:absolute;inset:0;transform-style:preserve-3d}
+.lid .top{position:absolute;inset:0;background:linear-gradient(145deg,#222226,#0a0a0b);border:1px solid #33333a}
+.lid .top::before,.lid .top::after{content:"";position:absolute;background:var(--shimmer)}
+.lid .top::before{left:50%;top:0;bottom:0;width:16px;margin-left:-8px}
+.lid .top::after{top:50%;left:0;right:0;height:16px;margin-top:-8px}
+.bow{position:absolute;left:50%;top:50%;width:70px;height:70px;margin:-35px;transform:translateZ(4px)}
+#box .glow{position:absolute;left:50%;top:50%;width:300px;height:300px;margin:-150px;border-radius:50%;background:radial-gradient(rgba(243,227,181,.55),transparent 65%);opacity:0;pointer-events:none}
+#box h3{position:absolute;bottom:14vh;left:0;right:0;text-align:center;font-size:clamp(30px,8vw,60px);padding:0 24px;opacity:0}
+
+/* 9 finale */
+#finale .bg{position:absolute;inset:0}
+#finale .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+#finale .bg::before{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(transparent 20%,rgba(11,11,12,.7) 55%,var(--ink) 92%)}
+#finale .copy{position:absolute;left:0;right:0;bottom:0;padding:0 24px max(48px,env(safe-area-inset-bottom));z-index:3;text-align:center}
+#finale .fl{font-family:var(--serif);font-size:clamp(22px,5.8vw,36px);line-height:1.2;margin-top:12px;opacity:0;max-width:680px;margin-inline:auto}
+#finale .sig{font-family:var(--script);font-size:clamp(38px,11vw,68px);color:var(--gold2);margin-top:26px;opacity:0}
+#replay{margin-top:26px;background:none;border:1px solid rgba(212,175,106,.6);color:var(--gold2);font:500 11px var(--sans);letter-spacing:.3em;text-transform:uppercase;padding:14px 26px;border-radius:40px;opacity:0;cursor:pointer}
+
+/* chrome: progress chain, music, cursor */
+#prog{position:fixed;right:10px;top:12vh;bottom:12vh;width:12px;z-index:50;pointer-events:none}
+#prog .rail{position:absolute;left:50%;top:0;bottom:0;width:1px;background:repeating-linear-gradient(rgba(212,175,106,.25) 0 3px,transparent 3px 5px)}
+#prog .fill{position:absolute;left:50%;top:0;width:1px;height:100%;background:repeating-linear-gradient(var(--gold2) 0 3px,transparent 3px 5px);transform:scaleY(0);transform-origin:top;box-shadow:0 0 6px var(--gold)}
+#prog .d{position:absolute;left:50%;width:8px;height:8px;margin:-4px;transform:rotate(45deg);border:1px solid rgba(212,175,106,.5);background:var(--ink);transition:all .4s}
+#prog .d.lit{background:#fff;border-color:var(--gold2);box-shadow:0 0 10px #fff,0 0 18px var(--gold)}
+#music{position:fixed;left:14px;top:max(14px,env(safe-area-inset-top));z-index:50;width:40px;height:40px;border-radius:50%;border:1px solid rgba(212,175,106,.5);background:rgba(11,11,12,.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:grid;place-items:center;cursor:pointer}
+#music span{display:flex;gap:2px;align-items:flex-end;height:14px}
+#music span i{width:2px;height:4px;background:var(--gold);border-radius:1px}
+#music.on span i{animation:eq 1s ease-in-out infinite}
+#music.on span i:nth-child(2){animation-delay:.2s}#music.on span i:nth-child(3){animation-delay:.4s}
+@keyframes eq{50%{height:14px}}
+#cursor{position:fixed;left:0;top:0;width:26px;height:26px;margin:-13px;border:1px solid var(--gold);border-radius:50%;pointer-events:none;z-index:99;display:none;transition:width .25s,height .25s,margin .25s}
+@media (hover:hover) and (pointer:fine){#cursor{display:block}body{cursor:none}button{cursor:none}}
+.tilt{transform-style:preserve-3d}
+
+/* desktop */
+@media (min-width:900px){
+  .beat{flex-direction:row}
+  .beat .img{flex:1 1 58%}
+  .beat .txt{flex:0 0 42%;display:flex;flex-direction:column;justify-content:center;padding:0 6vw}
+  .beat.flip{flex-direction:row-reverse}
+  #campaign .a{width:46vw;margin-left:12vw}
+  #campaign .b{width:26vw;margin:-30vw 14vw 0 auto}
+  .pol{width:220px}
+}
+
+/* reduced motion: static stack */
+.static #open h1 span,.static #open h2,.static .cue,.static #letter .bg,.static .q,.static .bub,.static #map .pin,
+.static #abroad .over p,.static #trans h3,.static #hero h2,.static #hero .sub,.static #hero .frame img,
+.static .beat .stat,.static .beat .line,.static #box h3,.static .fl,.static .sig,.static #replay,.static .pol{opacity:1!important;filter:none!important;transform:none!important}
+.static #letter .line{position:relative}
+.static #letter .lines{display:block;height:auto;padding:20vh 0}
+.static #letter .line+.line{margin-top:40px}
+.static #letter .line .w{opacity:1}
+.static #reel .track{flex-direction:column;padding:15vh 24px}
+.static #abroad .over p{position:relative;margin-top:20px}
+.static #abroad,.static #trans,.static #box{height:auto;min-height:100vh}
+.static .pol{position:relative;left:auto;top:auto;display:inline-block;margin:6px}
+.static #trans h3{position:relative;display:block}
+.static #trans .screen{flex-direction:column;gap:30px}
+.static #hero svg{display:none}
+.static .cue i,.static .grain::after,.static .gold{animation:none}
+</style>
+</head>
+<body>
+<canvas id="dust"></canvas>
+<div id="curtain"></div>
+<div id="cursor"></div>
+<button id="music" aria-label="Toggle ambient music"><span><i></i><i></i><i></i></span></button>
+<div id="prog" aria-hidden="true"><div class="rail"></div><div class="fill"></div>
+  <div class="d" style="top:33%"></div><div class="d" style="top:66%"></div><div class="d" style="top:100%"></div></div>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+  <linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#D4AF6A"/><stop offset=".5" stop-color="#F3E3B5"/><stop offset="1" stop-color="#D4AF6A"/></linearGradient>
+  <linearGradient id="gg2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#B8904A"/><stop offset=".5" stop-color="#F3E3B5"/><stop offset="1" stop-color="#D4AF6A"/></linearGradient>
+  <symbol id="star" viewBox="-20 -20 40 40"><path d="M0-20 L3-3 L20 0 L3 3 L0 20 L-3 3 L-20 0 L-3-3Z" fill="#fff"/><circle r="3" fill="#fff"/></symbol>
+</defs></svg>
+
+<main>
+<!-- 1 -->
+<section id="open" class="screen">
+  <div class="wrap">
+    <h1 class="serif gold" aria-label="Happy Birthday Lindsey"><small><span>H</span><span>a</span><span>p</span><span>p</span><span>y</span><span>&nbsp;</span><span>B</span><span>i</span><span>r</span><span>t</span><span>h</span><span>d</span><span>a</span><span>y</span></small><br><span>L</span><span>i</span><span>n</span><span>d</span><span>s</span><span>e</span><span>y</span></h1>
+    <h2 class="serif">Happy 21st.</h2>
+  </div>
+  <div class="cue"><span class="eyebrow">scroll</span><i></i></div>
+</section>
+
+<!-- 2 -->
+<section id="letter" class="screen">
+  <div class="bg grain"><img data-src="photo1.jpg" alt=""></div>
+  <div class="lines">
+    <p class="line serif">To the most amazing, wonderful, caring, loving and brilliant person I know…</p>
+    <p class="line serif">…thank you for being the light in so many people's lives.</p>
+    <p class="line serif">You make people feel like the most important people in the world.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section id="reel" class="screen" style="padding:0">
+  <div class="track">
+    <div class="head"><span class="eyebrow">The last year and a half</span><h3 class="serif">Every day, <em>a favourite.</em></h3></div>
+    <figure class="card"><div class="ph grain tilt"><img data-src="photo2.jpg" alt="Us in the car, both beaming"></div><p>In you I found my best friend.</p></figure>
+    <figure class="card"><div class="ph grain tilt"><img data-src="photo3.jpg" alt="Christmas jumpers and fairy lights"></div><p>My face aches from smiling around you.</p></figure>
+    <figure class="card"><div class="ph grain tilt"><img data-src="photo8.jpg" alt="Pink elevator mirror selfie"></div><p>My tummy hurts from all the laughs and giggles.</p></figure>
+    <figure class="card"><div class="ph grain tilt"><img data-src="photo7.jpg" alt="Black tie, you looking up at me"></div><p>Around you my voice changes and my features soften. A love like that is very rare.</p></figure>
+  </div>
+</section>
+<section id="best" class="screen"><h3 class="serif">You bring out<br><em class="gold">the best in me.</em></h3></section>
+
+<!-- 4 -->
+<section id="qual" class="screen">
+  <div class="grid">
+    <span class="eyebrow" style="margin-bottom:10px">What you do, every day</span>
+    <div class="q gold">Work ethic</div><div class="q gold">Compassion</div><div class="q gold">Problem solver</div><div class="q gold">Selfless</div><div class="q gold"><em>Infectious enthusiasm</em></div>
+  </div>
+</section>
+<section id="friends" class="screen">
+  <div class="wrap">
+    <h3 class="serif">A friend to…</h3>
+    <div class="chat">
+      <div class="bub"><b>Ally</b>linds you're the best 🫶</div>
+      <div class="bub"><b>Jadyn</b>literally who else would do that for me</div>
+      <div class="bub"><b>Alexa</b>LINDS 😭😭 love you</div>
+      <div class="bub"><b>Abby</b>what would we do without you</div>
+      <div class="bub more">…and countless others.</div>
+    </div>
+  </div>
+</section>
+<section id="parents" class="screen"><h3 class="serif">Amy and Charles must wonder every day <em class="gold">how they got so lucky.</em></h3></section>
+
+<!-- 5 -->
+<section id="abroad" class="screen">
+  <h3 class="serif">You conquered <em class="gold">abroad.</em></h3>
+  <div class="stage">
+    <svg id="map" viewBox="0 0 400 420" aria-label="Route: Australia, Vietnam, Thailand, Japan">
+      <!-- loose, minimalist coastlines -->
+      <path class="land" d="M250 300 C275 285 320 290 345 305 C365 330 360 375 330 392 C300 400 265 390 245 370 C230 345 235 315 250 300Z"/>
+      <path class="land" d="M95 120 C110 110 130 125 128 150 C135 175 125 200 110 215 C100 200 92 175 96 150Z"/>
+      <path class="land" d="M135 110 C150 115 158 140 150 170 C160 200 150 225 140 232 C132 210 140 180 132 160 C128 140 128 120 135 110Z"/>
+      <path class="land" d="M305 40 C320 50 322 75 312 95 C300 115 285 125 275 120 C290 100 298 75 300 55Z"/>
+      <path class="route" id="route" d="M300 330 C260 280 190 250 150 175 C140 165 125 160 112 170 C150 120 230 110 300 80"/>
+      <g class="pin" data-i="0" transform="translate(300 330)"><circle class="halo" r="14"/><circle r="4" fill="#F3E3B5"/><text x="-12" y="34" text-anchor="middle">Oz</text><text class="cap" x="-12" y="56" text-anchor="middle">The Selbys</text></g>
+      <g class="pin" data-i="1" transform="translate(150 175)"><circle class="halo" r="14"/><circle r="4" fill="#F3E3B5"/><text x="22" y="5">Vietnam</text><text class="cap" x="22" y="27">Hung</text></g>
+      <g class="pin" data-i="2" transform="translate(112 170)"><circle class="halo" r="14"/><circle r="4" fill="#F3E3B5"/><text x="-20" y="5" text-anchor="end">Thailand</text><text class="cap" x="-20" y="27" text-anchor="end">Elephants 🐘</text></g>
+      <g class="pin" data-i="3" transform="translate(300 80)"><circle class="halo" r="14"/><circle r="4" fill="#F3E3B5"/><text x="-20" y="-8" text-anchor="end">Japan</text><text class="cap" x="-20" y="14" text-anchor="end">Family time.</text><text class="cap" x="-20" y="34" text-anchor="end">Get spoiled,</text><text class="cap" x="-20" y="54" text-anchor="end">you deserve the world.</text></g>
+    </svg>
+  </div>
+  <div class="pol grain tilt" data-p="0"><div class="ph"><img data-src="photo4.jpg" alt="Tropical sunset together"></div></div>
+  <div class="pol grain tilt" data-p="1"><div class="ph"><img data-src="photo5.jpg" alt="Beach hug under palms"></div></div>
+  <div class="pol grain tilt" data-p="2"><div class="ph"><img data-src="photo6.jpg" alt="Hugging in the waves"></div></div>
+  <div class="over">
+    <p>You dove headfirst into every experience, made friends across cultures, and let go of needing to control everything. <em class="gold">I'm so proud of you.</em></p>
+    <p>Vlogs, messages, studying in the strangest places, and <em class="gold">still smashing your classes.</em></p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section id="trans" class="screen">
+  <h3 class="serif">So I wanted to give you something…</h3>
+  <h3 class="serif"><em>…that's as rare <span class="gold">as you are.</span></em></h3>
+  <div class="hair"></div>
+</section>
+
+<!-- 7b hero -->
+<section id="hero" class="screen light">
+  <div class="frame">
+    <img data-src="product2.jpg" alt="The ENEA Studio hand chain">
+    <svg id="trace" preserveAspectRatio="xMidYMid slice"><path id="chainPath"/><g id="sparks"></g></svg>
+  </div>
+  <div class="copy">
+    <h2 class="serif gold">The Hand Chain.</h2>
+    <p class="sub">For the hand I get to hold.</p>
+  </div>
+</section>
+
+<!-- 7c beats: data-from / data-to are image transform targets "scale x% y%" (x/y = focal point) -->
+<section class="beat screen light" style="padding:0" data-from="1.4 80 90" data-to="2.0 76 88">
+  <div class="img"><img data-src="product2.jpg" alt=""></div>
+  <div class="txt"><span class="eyebrow">01</span><div class="stat serif gold">14K<br>Solid Gold</div><p class="line">Not plated. Real all the way through. <em>Like you.</em></p></div>
+</section>
+<section class="beat flip screen light" style="padding:0" data-from="2.2 63 70" data-to="2.8 61 64">
+  <div class="img"><img data-src="product2.jpg" alt=""></div>
+  <div class="txt"><span class="eyebrow">02</span><div class="stat serif gold">1mm<br>Fine Chain</div><p class="line">Delicate, but it holds everything together.</p></div>
+</section>
+<section class="beat screen light" style="padding:0" data-from="1.9 72 88" data-to="1.9 52 36">
+  <div class="img"><img data-src="product2.jpg" alt=""></div>
+  <div class="txt"><span class="eyebrow">03</span><div class="stat serif gold">Wrist<br>to Finger</div><p class="line">It connects, the way you connect everyone around you.</p></div>
+</section>
+<section class="beat flip screen light diamonds" style="padding:0" data-from="1.9 62 66" data-to="2.05 62 66">
+  <div class="img"><img data-src="product2.jpg" alt=""><svg class="tw" viewBox="-20 -20 40 40"><use href="#star"/></svg><svg class="tw" viewBox="-20 -20 40 40"><use href="#star"/></svg><svg class="tw" viewBox="-20 -20 40 40"><use href="#star"/></svg></div>
+  <div class="txt"><span class="eyebrow">04</span><div class="stat serif gold">Three<br>Bezel-Set<br>Diamonds</div><div class="counter"><span>1</span> · <span>2</span> · <span>3</span></div><p class="line">Each one held safe on all sides, the way you hold your people.</p></div>
+</section>
+<section class="beat screen light" style="padding:0" data-from="1.6 52 80" data-to="1.8 50 80">
+  <div class="img"><img data-src="product1.jpg" alt=""></div>
+  <div class="txt"><span class="eyebrow">05</span><div class="stat serif gold">Handcrafted<br>in Athens</div><p class="line">By ENEA Studio, a family workshop making gold jewellery since 1953.<small>Made by a family, for the best daughter a family could ask for.</small></p></div>
+</section>
+<section class="beat flip screen light" style="padding:0" data-from="2.1 74 60" data-to="2.3 70 57">
+  <div class="img"><img data-src="product3.jpg" alt=""></div>
+  <div class="txt"><span class="eyebrow">06</span><div class="stat serif gold">Made<br>to Move</div><p class="line">Everyday sparkle, from lecture halls to black-tie, and every country in between.</p></div>
+</section>
+
+<!-- 7d -->
+<section id="campaign" class="light">
+  <div class="a"><img data-src="product1.jpg" alt="Editorial: the hand chain in profile" style="object-position:35% 60%"></div>
+  <div class="b"><img data-src="product3.jpg" alt="The hand chain by the sea" style="transform-origin:72% 56%;scale:1.8"></div>
+  <h3 class="serif">Made to be worn every day. <em class="gold">By you.</em></h3>
+</section>
+
+<!-- 8 -->
+<section id="box" class="screen">
+  <div class="glow"></div>
+  <div class="scene"><div class="cube">
+    <div class="face f1"></div><div class="face f2"></div><div class="face f3"></div><div class="face f4"></div><div class="face f5"></div>
+    <div class="lidwrap"><div class="lid"><div class="top"></div>
+      <svg class="bow" viewBox="-40 -40 80 80"><defs><linearGradient id="bw" x1="0" x2="1"><stop offset="0" stop-color="#B8904A"/><stop offset=".5" stop-color="#F3E3B5"/><stop offset="1" stop-color="#D4AF6A"/></linearGradient></defs>
+        <path d="M0 0 C-20-30 -40-10 -30 5 C-22 15 -8 6 0 0Z M0 0 C20-30 40-10 30 5 C22 15 8 6 0 0Z" fill="url(#bw)"/><circle r="6" fill="url(#bw)"/></svg>
+    </div></div>
+  </div></div>
+  <h3 class="serif">It's waiting for you <em class="gold">when you get home.</em></h3>
+</section>
+
+<!-- 9 -->
+<section id="finale" class="screen">
+  <div class="bg grain"><img data-src="photo7.jpg" alt=""></div>
+  <div class="copy">
+    <p class="fl">Enjoy the last weeks of this incredible chapter.</p>
+    <p class="fl">When you get back, I can't wait to keep giving you the world.</p>
+    <p class="fl">I'm so grateful you were born.</p>
+    <p class="fl"><em class="gold">Happy 21st, my love. May all your dreams come true.</em></p>
+    <p class="sig">I love you so much, Linds. — Ollie ♥</p>
+    <button id="replay">Replay</button>
+  </div>
+</section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script>
+(() => {
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches || !window.gsap;
+const mobile = innerWidth < 900;
+
+/* ---------- lazy images ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return; const i = e.target; i.src = i.dataset.src; io.unobserve(i);
+}), { rootMargin: '150% 0px' });
+$$('img[data-src]').forEach(i => { i.loading = 'lazy'; i.decoding = 'async'; io.observe(i); });
+
+/* ---------- gold dust ---------- */
+const cv = $('#dust'), cx = cv.getContext('2d'); let W, H, motes = [];
+const fit = () => { const d = Math.min(devicePixelRatio, 2); W = cv.width = innerWidth * d; H = cv.height = innerHeight * d; };
+fit(); addEventListener('resize', fit);
+for (let i = 0; i < (mobile ? 45 : 90); i++) motes.push({ x: Math.random(), y: Math.random(), r: Math.random() * 1.6 + .3, v: Math.random() * .0004 + .0001, a: Math.random() * Math.PI * 2 });
+(function draw() {
+  cx.clearRect(0, 0, W, H);
+  const dark = !document.body.classList.contains('lights');
+  motes.forEach(m => {
+    m.y -= m.v; m.a += .01; if (m.y < -.02) m.y = 1.02;
+    const tw = .35 + Math.sin(m.a) * .3;
+    cx.beginPath(); cx.arc((m.x + Math.sin(m.a) * .01) * W, m.y * H, m.r * (W / innerWidth), 0, 7);
+    cx.fillStyle = dark ? `rgba(243,227,181,${tw})` : `rgba(184,144,74,${tw * .5})`; cx.fill();
+  });
+  if (!reduce) requestAnimationFrame(draw);
+})();
+
+/* ---------- cursor + tilt ---------- */
+const cur = $('#cursor');
+addEventListener('pointermove', e => { cur.style.transform = `translate(${e.clientX}px,${e.clientY}px)`; });
+$$('.tilt, .beat .img, #campaign .a, #campaign .b').forEach(el => {
+  const set = (x, y) => { el.style.transform = `perspective(700px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg)`; };
+  el.addEventListener('pointermove', e => { const r = el.getBoundingClientRect(); set((e.clientX - r.left) / r.width - .5, (e.clientY - r.top) / r.height - .5); });
+  el.addEventListener('pointerleave', () => set(0, 0));
+  el.addEventListener('pointerdown', () => el.style.transition = 'transform .4s');
+});
+if (window.DeviceOrientationEvent && mobile) addEventListener('deviceorientation', e => {
+  if (e.gamma == null) return; const x = Math.max(-1, Math.min(1, e.gamma / 30)) * 2;
+  $$('.card .ph').forEach(p => p.style.transform = `perspective(700px) rotateY(${x}deg)`);
+});
+
+/* ---------- ambient music (WebAudio pad, off by default) ---------- */
+let ac, master; const mb = $('#music');
+mb.onclick = () => {
+  if (!ac) {
+    ac = new (window.AudioContext || window.webkitAudioContext)(); master = ac.createGain(); master.gain.value = 0;
+    const lp = ac.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 900; master.connect(lp); lp.connect(ac.destination);
+    const chords = [[220, 277.2, 329.6, 415.3], [196, 246.9, 293.7, 370], [174.6, 220, 261.6, 329.6], [196, 246.9, 293.7, 392]];
+    const vs = chords[0].map(() => { const o = ac.createOscillator(), g = ac.createGain(); o.type = 'sine'; g.gain.value = .05; o.connect(g); g.connect(master); o.start(); return o; });
+    let c = 0; setInterval(() => { c = (c + 1) % 4; vs.forEach((o, i) => o.frequency.setTargetAtTime(chords[c][i], ac.currentTime, 1.2)); }, 6000);
+    vs.forEach((o, i) => o.frequency.value = chords[0][i]);
+    const chime = () => { const o = ac.createOscillator(), g = ac.createGain(); o.frequency.value = [880, 1108, 1318, 1661][Math.random() * 4 | 0]; g.gain.setValueAtTime(0, ac.currentTime); g.gain.linearRampToValueAtTime(.03, ac.currentTime + .05); g.gain.exponentialRampToValueAtTime(.0001, ac.currentTime + 4); o.connect(g); g.connect(master); o.start(); o.stop(ac.currentTime + 4); };
+    setInterval(() => Math.random() < .5 && chime(), 2500);
+  }
+  const on = !mb.classList.contains('on'); mb.classList.toggle('on', on);
+  ac.resume(); master.gain.setTargetAtTime(on ? .5 : 0, ac.currentTime, .8);
+};
+
+/* ---------- hero chain path ----------
+   Hand-mapped in normalised image coordinates (0–1) for product2.jpg.
+   Order: bracelet loop round the wrist → Y-junction → up the back of the hand
+   → small open ring near the knuckle → loop round the middle finger.
+   Tweak these numbers if the trace doesn't sit exactly on the chain. */
+const CHAIN = {
+  bracelet: [[.561,1.0],[.628,.935],[.700,.853],[.785,.857],[.886,.903]],
+  strand:   [[.700,.853],[.663,.792],[.619,.667],[.587,.540],[.571,.482]],
+  ring:     [.567,.474, .010],
+  finger:   [[.567,.464],[.581,.354],[.443,.401],[.561,.471]],
+  diamonds: [[.663,.792],[.619,.667],[.587,.540]]   // wrist → knuckle
+};
+/* where a point of an object-fit:cover image lands inside its box, after a gsap scale around a % origin */
+function mapPoint(box, iw, ih, [px, py], s, ox, oy) {
+  const w = box.clientWidth, h = box.clientHeight, c = Math.max(w / iw, h / ih);
+  const x = (w - iw * c) / 2 + px * iw * c, y = (h - ih * c) / 2 + py * ih * c;
+  const Ox = ox / 100 * w, Oy = oy / 100 * h;
+  return [Ox + s * (x - Ox), Oy + s * (y - Oy)];
+}
+function buildTrace(iw, ih) {
+  const svg = $('#trace'); svg.setAttribute('viewBox', `0 0 ${iw} ${ih}`);
+  const P = ([x, y]) => `${(x * iw).toFixed(1)} ${(y * ih).toFixed(1)}`;
+  const smooth = pts => pts.map((p, i) => (i ? 'L' : 'M') + P(p)).join(' ');
+  const [rx, ry, rr] = CHAIN.ring, R = rr * iw;
+  const d = smooth(CHAIN.bracelet) + ' ' + smooth(CHAIN.strand) +
+    ` M${P([rx, ry])} m${-R} 0 a${R} ${R} 0 1 0 ${2 * R} 0 a${R} ${R} 0 1 0 ${-2 * R} 0 ` + smooth(CHAIN.finger);
+  const p = $('#chainPath'); p.setAttribute('d', d); p.style.strokeWidth = iw / 260;
+  $('#sparks').innerHTML = CHAIN.diamonds.map(([x, y]) =>
+    `<use href="#star" class="spark" x="${x * iw - iw * .03}" y="${y * ih - iw * .03}" width="${iw * .06}" height="${iw * .06}"/>`).join('');
+  return p.getTotalLength();
+}
+
+if (reduce) {
+  document.documentElement.classList.add('static');
+  $$('img[data-src]').forEach(i => i.src = i.dataset.src);
+  $('#replay').onclick = () => scrollTo({ top: 0, behavior: 'auto' });
+  return;
+}
+
+/* ---------- smooth scroll ---------- */
+gsap.registerPlugin(ScrollTrigger);
+const lenis = new Lenis({ lerp: .085, smoothWheel: true });
+lenis.on('scroll', ScrollTrigger.update);
+gsap.ticker.add(t => lenis.raf(t * 1000)); gsap.ticker.lagSmoothing(0);
+const pin = (trigger, end, tl, extra = {}) => ScrollTrigger.create({ trigger, start: 'top top', end: '+=' + end, pin: true, scrub: 1, animation: tl, anticipatePin: 1, ...extra });
+const soft = { opacity: 0, filter: 'blur(10px)' };
+
+/* progress chain */
+ScrollTrigger.create({ start: 0, end: 'max', onUpdate: s => {
+  $('#prog .fill').style.transform = `scaleY(${s.progress})`;
+  $$('#prog .d').forEach((d, i) => d.classList.toggle('lit', s.progress >= [.33, .66, .995][i]));
+}});
+
+/* 1 cold open */
+gsap.timeline({ delay: .4 })
+  .to('#open h1 span', { opacity: 1, filter: 'blur(0px)', duration: .9, stagger: .09, ease: 'power2.out' })
+  .to('#open h2', { opacity: 1, y: 0, duration: 1.4, ease: 'power2.out' }, '+=.6')
+  .to('.cue', { opacity: 1, duration: 1 }, '+=.4');
+gsap.set('#open h2', { y: 16 });
+gsap.to('#open .wrap', { ...soft, scale: .94, scrollTrigger: { trigger: '#open', start: 'top top', end: 'bottom top', scrub: true } });
+
+/* 2 letter — word-by-word, each line replacing the last */
+const lines = $$('#letter .line');
+lines.forEach(l => l.innerHTML = l.textContent.split(' ').map(w => `<span class="w">${w}</span>`).join(' '));
+const lt = gsap.timeline();
+lt.to('#letter .bg', { opacity: 1, duration: 1 }, 0).fromTo('#letter .bg img', { scale: 1.2 }, { scale: 1, duration: lines.length * 3, ease: 'none' }, 0);
+lines.forEach((l, i) => {
+  if (i) gsap.set(l, { opacity: 0 });
+  const t = i * 3; lt.set(l, { opacity: 1 }, t).to($$('.w', l), { opacity: 1, stagger: .08, duration: .3 }, t + .1);
+  if (i < lines.length - 1) lt.to(l, { ...soft, y: -20, duration: .5 }, t + 2.4);
+});
+lt.to('#letter .lines', { ...soft, duration: .6 }, '+=.6');
+pin('#letter', mobile ? 2600 : 3200, lt);
+
+/* 3 horizontal reel */
+const track = $('#reel .track');
+const reelTl = gsap.to(track, { x: () => -(track.scrollWidth - innerWidth), ease: 'none' });
+pin('#reel', () => track.scrollWidth, reelTl, { invalidateOnRefresh: true });
+$$('#reel .card').forEach(c => gsap.from(c.querySelector('p'), { opacity: 0, y: 20, scrollTrigger: { trigger: c, containerAnimation: reelTl, start: 'left 70%', end: 'left 40%', scrub: true } }));
+pin('#best', 1000, gsap.timeline().from('#best h3', { ...soft, scale: .9, duration: 1 }).to('#best h3', { ...soft, duration: .6 }, '+=1'));
+
+/* 4 qualities */
+const qt = gsap.timeline();
+$$('.q').forEach((q, i) => qt.fromTo(q, { opacity: 0, rotateX: -90 }, { opacity: 1, rotateX: 0, duration: 1, ease: 'back.out(1.6)' }, i * .8));
+qt.to('#qual .grid', { ...soft, duration: 1 }, '+=1.2');
+pin('#qual', 2000, qt);
+const ft = gsap.timeline().from('#friends h3', { ...soft, duration: .8 });
+$$('.bub').forEach((b, i) => ft.fromTo(b, { opacity: 0, y: 20, scale: .9 }, { opacity: 1, y: 0, scale: 1, duration: .6, ease: 'back.out(2)' }, .6 + i * .55));
+ft.to('#friends .wrap', { ...soft, duration: .8 }, '+=1');
+pin('#friends', 1800, ft);
+pin('#parents', 1000, gsap.timeline().from('#parents h3', { ...soft, y: 30, duration: 1 }).to('#parents h3', { ...soft, duration: .6 }, '+=1'));
+
+/* 5 map */
+const route = $('#route'), RL = route.getTotalLength();
+gsap.set(route, { strokeDasharray: RL, strokeDashoffset: RL });
+const stops = [0, .42, .55, 1], mt = gsap.timeline();
+mt.from('#abroad h3', { ...soft, duration: .5 }, 0).to(route, { strokeDashoffset: 0, duration: 6, ease: 'none' }, .5);
+$$('#map .pin').forEach((p, i) => mt.fromTo(p, { opacity: 0, scale: .4, transformOrigin: 'center' }, { opacity: 1, scale: 1, duration: .4, ease: 'back.out(2)' }, .5 + stops[i] * 6 - .1));
+const fan = mobile ? [[-105, 255, -9], [0, 235, 4], [105, 255, 9]] : [[-430, -150, -10], [250, -170, 7], [300, 60, -4]];
+$$('.pol').forEach((p, i) => {
+  gsap.set(p, { xPercent: -50, yPercent: -50, rotate: 0 });
+  mt.fromTo(p, { opacity: 0, x: 0, y: 400, rotate: 0 }, { opacity: 1, x: fan[i][0], y: fan[i][1], rotate: fan[i][2], duration: 1.4, ease: 'power2.out' }, 1 + i * 1.6);
+});
+const ov = $$('#abroad .over p');
+mt.to('#map', { opacity: .25, duration: .6 }, 7).to('.pol', { opacity: .35, duration: .6 }, 7)
+  .fromTo(ov[0], soft, { opacity: 1, filter: 'blur(0px)', duration: .8 }, 7.2).to(ov[0], { ...soft, duration: .6 }, 9.2)
+  .fromTo(ov[1], soft, { opacity: 1, filter: 'blur(0px)', duration: .8 }, 9.6)
+  .to('#abroad > *', { ...soft, duration: .8 }, 11.6);
+pin('#abroad', mobile ? 3600 : 4200, mt);
+
+/* 6 transition + 7a curtain */
+const th = $$('#trans h3'), tt = gsap.timeline();
+tt.fromTo(th[0], soft, { opacity: 1, filter: 'blur(0px)', duration: 1 }).to(th[0], { ...soft, duration: .7 }, '+=1')
+  .fromTo(th[1], soft, { opacity: 1, filter: 'blur(0px)', duration: 1 }).to(th[1], { ...soft, duration: .7 }, '+=1.4')
+  .to('#trans .hair', { scaleX: 1, duration: .6, ease: 'power4.in' })
+  .set('#curtain', { transformOrigin: 'top' })
+  .to('#curtain', { scaleY: 1, duration: 1.4, ease: 'power2.inOut' }, '+=.2')
+  .to('#trans .hair', { top: '100%', duration: 1.4, ease: 'power2.inOut' }, '<');
+pin('#trans', 2600, tt, { onLeave: () => document.body.classList.add('lights'), onEnterBack: () => document.body.classList.remove('lights') });
+
+/* 7b hero trace */
+const heroImg = $('#hero .frame img'), path = $('#chainPath');
+const ht = gsap.timeline();
+const initHero = () => {
+  const L = buildTrace(heroImg.naturalWidth || 1000, heroImg.naturalHeight || 1250);
+  gsap.set(path, { strokeDasharray: L, strokeDashoffset: L });
+  ht.clear()
+    .to(path, { strokeDashoffset: 0, duration: 4, ease: 'none' })
+    .fromTo('#hero .spark', { opacity: 0, scale: 0, rotate: -45 }, { opacity: 1, scale: 1.4, rotate: 0, duration: .35, stagger: .45, ease: 'back.out(3)' })
+    .to('#hero .spark', { scale: .7, opacity: .9, duration: .3, stagger: .45 }, '-=.9')
+    .to(heroImg, { opacity: 1, filter: 'blur(0px)', duration: 2 }, '+=.2')
+    .to('#trace', { opacity: 0, duration: 1.2 }, '-=.8')
+    .to('#hero h2', { opacity: 1, y: 0, duration: 1 }, '-=.4')
+    .to('#hero .sub', { opacity: 1, y: 0, duration: .8 }, '-=.4')
+    .to({}, { duration: 1.5 });
+  ScrollTrigger.refresh();
+};
+gsap.set(['#hero h2', '#hero .sub'], { y: 30 });
+heroImg.src = heroImg.dataset.src; // preload — the trace needs real dimensions
+heroImg.complete && heroImg.naturalWidth ? initHero() : (heroImg.onload = initHero, heroImg.onerror = initHero);
+pin('#hero', mobile ? 2800 : 3400, ht);
+
+/* 7c beats */
+const parse = s => s.split(' ').map(Number);
+$$('.beat').forEach((b, idx) => {
+  const img = $('img', b.querySelector('.img')), [s0, x0, y0] = parse(b.dataset.from), [s1, x1, y1] = parse(b.dataset.to);
+  // focal-point zoom: scale around a point by shifting transformOrigin
+  const bt = gsap.timeline();
+  bt.fromTo(img, { scale: s0, transformOrigin: `${x0}% ${y0}%` },
+    { scale: s1, transformOrigin: `${x1}% ${y1}%`, duration: 4, ease: 'none' }, 0)
+    .fromTo(img, { filter: 'blur(8px)', opacity: .4 }, { filter: 'blur(0px)', opacity: 1, duration: .9 }, 0)
+    .to($$('.stat, .line', b), { opacity: 1, y: 0, duration: .8, stagger: .4 }, .4);
+  if (b.classList.contains('diamonds')) {
+    const tws = $$('.tw', b), nums = $$('.counter span', b);
+    const box = b.querySelector('.img'), sMid = (s0 + s1) / 2, oxMid = (x0 + x1) / 2, oyMid = (y0 + y1) / 2;
+    const place = () => tws.forEach((t, i) => {
+      const [x, y] = mapPoint(box, 892, 1284, CHAIN.diamonds[i], sMid, oxMid, oyMid);
+      t.style.left = x + 'px'; t.style.top = y + 'px';
+    });
+    place(); addEventListener('resize', place);
+    tws.forEach((t, i) => {
+      bt.fromTo(t, { opacity: 0, scale: 0, rotate: -60 }, { opacity: 1, scale: 1.2, rotate: 0, duration: .3, ease: 'back.out(3)' }, 1.4 + i * .8)
+        .to(t, { opacity: 0, scale: .5, duration: .4 }, 1.75 + i * .8)
+        .call(() => nums.forEach((n, j) => n.classList.toggle('lit', j <= i)), null, 1.4 + i * .8);
+    });
+    bt.call(() => nums.forEach(n => n.classList.remove('lit')), null, 1.3);
+  }
+  bt.to(b.children, { opacity: 0, filter: 'blur(8px)', duration: .6 }, 4.2);
+  pin(b, mobile ? 1500 : 1800, bt, { onToggle: s => b.classList.toggle('on', s.isActive) });
+});
+
+/* 7d campaign parallax */
+gsap.fromTo('#campaign .a img', { yPercent: -8 }, { yPercent: 0, ease: 'none', scrollTrigger: { trigger: '#campaign', scrub: true } });
+gsap.fromTo('#campaign .b', { y: 120 }, { y: -80, ease: 'none', scrollTrigger: { trigger: '#campaign', scrub: true } });
+gsap.fromTo('#campaign .b img', { yPercent: -12 }, { yPercent: 0, ease: 'none', scrollTrigger: { trigger: '#campaign', scrub: true } });
+gsap.from('#campaign h3', { ...soft, y: 40, scrollTrigger: { trigger: '#campaign h3', start: 'top 85%', end: 'top 55%', scrub: true } });
+
+/* 8 box */
+ScrollTrigger.create({ trigger: '#box', start: 'top 60%', onEnter: () => document.body.classList.remove('lights'), onLeaveBack: () => document.body.classList.add('lights') });
+ScrollTrigger.create({ trigger: '#box', start: 'top 60%', onEnter: () => gsap.to('#curtain', { scaleY: 0, transformOrigin: 'bottom', duration: 1 }), onLeaveBack: () => gsap.to('#curtain', { scaleY: 1, transformOrigin: 'bottom', duration: .8 }) });
+let fired = false; const bx = gsap.timeline();
+bx.from('.scene', { ...soft, y: 60, scale: .8, duration: 1 })
+  .to('.cube', { rotateY: 328, duration: 2, ease: 'power1.inOut' }, 0)
+  .to('.lidwrap', { y: -150, rotateZ: -14, x: 30, duration: 1.4, ease: 'power2.out' }, 2.2)
+  .to('#box .glow', { opacity: 1, scale: 1.4, duration: 1 }, 2.3)
+  .call(() => {
+    if (fired || !window.confetti) return; fired = true;
+    const o = { colors: ['#D4AF6A', '#F3E3B5', '#B8904A', '#ffffff'], disableForReducedMotion: true, scalar: .9 };
+    confetti({ ...o, particleCount: 140, spread: 80, startVelocity: 42, origin: { y: .45 } });
+    setTimeout(() => confetti({ ...o, particleCount: 60, spread: 120, origin: { y: .4 }, shapes: ['star'] }), 250);
+  }, null, 2.4)
+  .to('#box h3', { opacity: 1, y: 0, duration: 1 }, 3)
+  .to({}, { duration: 1.5 })
+  .to('#box > *', { ...soft, duration: .8 });
+gsap.set('#box h3', { y: 30 });
+pin('#box', 2400, bx, { onLeaveBack: () => (fired = false) });
+
+/* 9 finale */
+const fnl = gsap.timeline();
+fnl.fromTo('#finale .bg img', { scale: 1.15 }, { scale: 1, duration: 8, ease: 'none' }, 0);
+$$('.fl').forEach((l, i) => fnl.fromTo(l, { ...soft, y: 20 }, { opacity: 1, filter: 'blur(0px)', y: 0, duration: 1 }, .5 + i * 1.3));
+fnl.fromTo('.sig', { opacity: 0, clipPath: 'inset(0 100% 0 0)' }, { opacity: 1, clipPath: 'inset(0 0% 0 0)', duration: 1.6, ease: 'power1.inOut' }, 6)
+   .to('#replay', { opacity: 1, duration: .6 }, 7.4);
+pin('#finale', 2400, fnl);
+$('#replay').onclick = () => lenis.scrollTo(0, { duration: 3.2, easing: t => 1 - Math.pow(1 - t, 4) });
+
+addEventListener('load', () => ScrollTrigger.refresh());
+})();
+</script>
+</body>
+</html>
